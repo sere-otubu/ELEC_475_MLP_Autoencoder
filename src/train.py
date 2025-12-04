@@ -37,7 +37,7 @@ def train(n_epochs, optimizer, model, loss_fn, train_loader, scheduler, device, 
         loss_train = 0.0
         for data in train_loader:
             imgs = data[0]
-            imgs= imgs.view(imgs.shape[0], -1)  #   Q1/ What does this line do, and why is it needed?
+            imgs= imgs.view(imgs.shape[0], -1)
             #   print('break 8 : ', imgs.shape, imgs.dtype)
             imgs = imgs.to(device=device)
             outputs = model(imgs)
