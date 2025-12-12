@@ -1,4 +1,10 @@
-
+#########################################################################################################
+#
+#   ELEC 475 - Lab 1 (Steps 3 - 4 Layer MLP Autoencoder)
+#   Erhowvosere Otubu - 20293052
+#   Mihran Asadullah - 20285090
+#   Fall 2025
+#
 
 import torch
 import torch.nn.functional as F
@@ -31,12 +37,12 @@ class autoencoderMLP4Layer(nn.Module):
         X = self.fc2(X)
         X = F.relu(X)
         return X
+    
     def decode (self, X):
         X = self.fc3(X)
         X = F.relu(X)
         X = self.fc4(X)
         X = torch.sigmoid(X)
-
         return X
 
     def forward(self, X):

@@ -1,4 +1,3 @@
-
 #########################################################################################################
 #
 #   ELEC 475 - Lab 1
@@ -19,7 +18,7 @@ from torch.utils.data import DataLoader
 from torchsummary import summary
 from model import autoencoderMLP4Layer
 
-#   some default parameters, which can be overwritten by command line arguments
+# Some default parameters, which can be overwritten by command line arguments
 save_file = 'weights.pth'
 n_epochs = 30
 batch_size = 256
@@ -145,6 +144,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
